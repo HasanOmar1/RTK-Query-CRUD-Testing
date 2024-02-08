@@ -58,10 +58,10 @@ Todo.deleteMany({})
 
 # Auth
 
-### import jwt from 'jsonwebtoken"
+- import jwt from 'jsonwebtoken"
 
 ```const generateAuthToken = (userId) => {
-// Generate a token using a library like jsonwebtoken
+
 const token = jwt.sign({ userId }, [your secret key], {
 expiresIn: "7d",
 });
@@ -72,9 +72,7 @@ return token;
 Then inside the describe where u have a protected route use this:
 
 - const token = generateAuthToken([Valid user id]);
-  Then add this to the route in the testing
+
+Then add this to the route in the testing
+
 - .auth(token, { type: "bearer" })
-
-```
-
-```
