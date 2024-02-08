@@ -11,7 +11,7 @@
 
 # Hooks
 
-````
+```
 describe('hooks', function () {
 before(function () {
 runs once before the first test in this block
@@ -31,7 +31,8 @@ runs after each test in this block
 
     test cases
 
-});```
+});
+```
 
 # examples
 
@@ -54,6 +55,7 @@ Todo.deleteMany({})
 .catch((err) => done(err)); Call done(err) if there's an error
 });
 ```
+
 # Auth
 
 ### import jwt from 'jsonwebtoken"
@@ -66,9 +68,13 @@ expiresIn: "7d",
 return token;
 };
 ```
+
 Then inside the describe where u have a protected route use this:
 
 - const token = generateAuthToken([Valid user id]);
   Then add this to the route in the testing
 - .auth(token, { type: "bearer" })
-````
+
+```
+
+```
